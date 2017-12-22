@@ -2,15 +2,15 @@
 var mainVm = new Vue({
     el: '#app',
     data: {
-		chest: ['bench press','dip','incline', ],
-		legs: ['Barbell Squat','lunge'],
-		back: ['deadlift', 'row'],
-		bicep: ['preacher curl', 'rope curl'],
-		tricep: ['skullcrushers', 'rope pull down'],
-		shoulder: ['standing overhead press', 'lat raise'],
-		abs: ['v-ups', 'plank'],
+		chest: ['Bench Press','Dumbbell Bench Press','Incline Bench Press','Pushups', 'Dumbell Flyes', 'Incline Dumbbell Bench Press','Dips','Machine-Press','Machine Incline' ],
+		quad: ['Barbell Squat','Leg Press','Single-Leg Press','Barbell Lunge','Box Squat','Dumbell Lunges','Barbell Lunges', 'Goblet Squat','Front Squat'],
+		back: ['Pull Ups', 'V-Bar Pulldown','Wide-Grip Pulldown','T-Bar Row','Dumbell Row','Reverse Grip Bent Over Row','Hyperextension','Deadlift','Cable Row'],
+		bicep: ['Incline Hammer Curl', 'Barbell Curl', 'Spider Curl', 'Machine Curl', 'Ez Bar Curl', 'Preacher Curl', 'One Arm Preacher Curl'],
+		tricep: ['Dips', 'Close Grip Bench','Reverse Grip Tricep Pushdown', 'Skull Crushers','Overhead extension with rope'],
+		shoulder: ['One-Arm Linear Jammer', 'Side Lat to Front Raise', 'One-Arm Dumbell Press', 'Military Press','One-Arm Kettlebell Press',' Barbell Overhead Press'],
+		abs: ['Landmine 180s', 'TRX fallout','Plank','Cable Lift','Hanging Leg Raise','Spider Crawl','Cocoons',],
 		randomChest:'',
-		randomLegs:'',
+		randomQuad:'',
 		randomBack:'',
 		randomBicep:'',
 		randomTricep:'',
@@ -20,7 +20,7 @@ var mainVm = new Vue({
 	methods: {
 		test: function (){
 			 this.randomChest = this.chest[Math.floor(Math.random()*this.chest.length)]
-			 this.randomLegs = this.legs[Math.floor(Math.random()*this.legs.length)]
+			 this.randomQuad = this.quad[Math.floor(Math.random()*this.quad.length)]
 			 this.randomBack = this.back[Math.floor(Math.random()*this.back.length)]
 			 this.randomBicep = this.bicep[Math.floor(Math.random()*this.bicep.length)]
 			 this.randomTricep = this.tricep[Math.floor(Math.random()*this.tricep.length)]
