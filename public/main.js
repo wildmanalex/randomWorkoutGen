@@ -1,4 +1,3 @@
-
 var mainVm = new Vue({
     el: '#app',
     data: {
@@ -16,9 +15,18 @@ var mainVm = new Vue({
 		randomTricep:'',
 		randomShoulder:'',
 		randomAbs:'',
+		chestSet:'',
+		legSet:'',
+		backSet:'',
+		bicepSet:'',
+		tricepSet:'',
+		shoulderSet:'',
+		absSet:'',
     },
+
 	methods: {
-		test: function (){
+		highvolume: function () {
+			console.log("created a random workout")
 			 this.randomChest = this.chest[Math.floor(Math.random()*this.chest.length)]
 			 this.randomQuad = this.quad[Math.floor(Math.random()*this.quad.length)]
 			 this.randomBack = this.back[Math.floor(Math.random()*this.back.length)]
@@ -27,17 +35,40 @@ var mainVm = new Vue({
 			 this.randomShoulder= this.shoulder[Math.floor(Math.random()*this.shoulder.length)]
 			 this.randomAbs = this.abs[Math.floor(Math.random()*this.abs.length)]
 
+			 if(this.randomAbs === "Plank") {
+				 console.log('plankkkkkk')
+				 console.log(this.absSet)
+				 this.absSet === "3 x 30 seconds"
+			 }
+			 else {
+			 this.chestSet = '4 sets x 10-12 reps'
+			 this.legSet = '4 sets x 8-10 reps'
+			 this.backSet = '4 sets x 8-10 reps'
+			 this.bicepSet = '4 sets x 10-12 reps'
+			 this.tricepSet = '4 sets x 10-12 reps'
+			 this.shoulderSet = '4 sets x 10-12 reps'
+			 this.absSet = '4 sets x 10-12 reps'
+		 	}
 
-			// var x = Math.floor(Math.random() * this.chest.length)
-			// console.log(x)
-			// for(var i = 0; i < this.chest.length; i++) {
-			// 	if(x = i){
-			// 		this.workout += this.chest[i]
-			// 	}
-			// }
-		}
+
+		},
+		lowvolume: function () {
+			console.log("created a random workout")
+			 this.randomChest = this.chest[Math.floor(Math.random()*this.chest.length)]
+			 this.randomQuad = this.quad[Math.floor(Math.random()*this.quad.length)]
+			 this.randomBack = this.back[Math.floor(Math.random()*this.back.length)]
+			 this.randomBicep = this.bicep[Math.floor(Math.random()*this.bicep.length)]
+			 this.randomTricep = this.tricep[Math.floor(Math.random()*this.tricep.length)]
+			 this.randomShoulder= this.shoulder[Math.floor(Math.random()*this.shoulder.length)]
+			 this.randomAbs = this.abs[Math.floor(Math.random()*this.abs.length)]
+
+			this.chestSet = '3 sets x 5 reps'
+			this.legSet = '3 sets x 5 reps'
+			this.backSet = '3 sets x 5 reps'
+			this.bicepSet = '3 sets x 8-10 reps'
+			this.tricepSet = '3 sets x 8-10 reps'
+			this.shoulderSet = '3 sets x 5 reps'
+			this.absSet = '3 sets x 8-10 reps'
+		},
 	},
-
 })
-
-//three day a week workout, with an exercise from chest, legs, back, bicep, tricep, shoulder, abs
